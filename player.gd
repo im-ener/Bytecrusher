@@ -23,6 +23,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * MOUSE_SENS
 		rotation_degrees.x -= event.relative.y * MOUSE_SENS
+	rotation_degrees.x = clamp(rotation_degrees.x,-88,90)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("exit"):
