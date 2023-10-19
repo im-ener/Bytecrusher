@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var animated_sprite_2d = $CanvasLayer/gunbase/AnimatedSprite2D
 @onready var ray_cast_3d = $RayCast3D
 @onready var shoot_sound = $shootsound
-
+@onready var cam = $Camera3D
 
 
 const SPEED = 5.0

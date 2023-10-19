@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bx2t25pshog62"]
+[gd_scene load_steps=11 format=3 uid="uid://bx2t25pshog62"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_omxu1"]
 [ext_resource type="Texture2D" uid="uid://bqdwbpryrpkse" path="res://gun_sprites.png" id="2_e48jg"]
@@ -26,10 +26,6 @@ region = Rect2(474, 0, 474, 381)
 atlas = ExtResource("2_e48jg")
 region = Rect2(948, 0, 474, 381)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_miw6p"]
-atlas = ExtResource("2_e48jg")
-region = Rect2(1422, 0, 474, 381)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_b7p8x"]
 animations = [{
 "frames": [{
@@ -52,9 +48,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5o4hq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_miw6p")
 }],
 "loop": false,
 "name": &"shoot",
