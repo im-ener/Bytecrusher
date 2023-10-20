@@ -1,39 +1,53 @@
-[gd_scene load_steps=11 format=3 uid="uid://bx2t25pshog62"]
+[gd_scene load_steps=13 format=3 uid="uid://bx2t25pshog62"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_omxu1"]
-[ext_resource type="Texture2D" uid="uid://bqdwbpryrpkse" path="res://gun_sprites.png" id="2_e48jg"]
+[ext_resource type="Texture2D" uid="uid://b4ydxb1nnewbo" path="res://gun_sprites.png" id="2_e48jg"]
 [ext_resource type="AudioStream" uid="uid://bxmdi8yeq2ltc" path="res://pistol shot.mp3" id="3_0qga6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_umtuu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qxncu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_otbcq"]
 atlas = ExtResource("2_e48jg")
-region = Rect2(1422, 0, 474, 381)
+region = Rect2(2355, 0, 471, 381)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5i6f4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jecy5"]
 atlas = ExtResource("2_e48jg")
-region = Rect2(948, 0, 474, 381)
+region = Rect2(1884, 0, 471, 381)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gmyo6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgenl"]
 atlas = ExtResource("2_e48jg")
-region = Rect2(0, 0, 474, 381)
+region = Rect2(1413, 0, 471, 381)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o5asc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7govo"]
 atlas = ExtResource("2_e48jg")
-region = Rect2(474, 0, 474, 381)
+region = Rect2(942, 0, 471, 381)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5o4hq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbey0"]
 atlas = ExtResource("2_e48jg")
-region = Rect2(948, 0, 474, 381)
+region = Rect2(0, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln5nb"]
+atlas = ExtResource("2_e48jg")
+region = Rect2(471, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l545w"]
+atlas = ExtResource("2_e48jg")
+region = Rect2(942, 0, 471, 381)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b7p8x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qxncu")
+"texture": SubResource("AtlasTexture_otbcq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5i6f4")
+"texture": SubResource("AtlasTexture_jecy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgenl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7govo")
 }],
 "loop": true,
 "name": &"idle",
@@ -41,13 +55,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gmyo6")
+"texture": SubResource("AtlasTexture_vbey0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o5asc")
+"texture": SubResource("AtlasTexture_ln5nb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5o4hq")
+"texture": SubResource("AtlasTexture_l545w")
 }],
 "loop": false,
 "name": &"shoot",
@@ -89,6 +103,8 @@ position = Vector2(915, 458)
 sprite_frames = SubResource("SpriteFrames_b7p8x")
 animation = &"shoot"
 autoplay = "idle"
+frame = 2
+frame_progress = 1.0
 
 [node name="crosshair" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 8

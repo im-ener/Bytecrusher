@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var animated_sprite_2d = $CanvasLayer/gunbase/AnimatedSprite2D
 @onready var ray_cast_3d = $RayCast3D
 @onready var shoot_sound = $shootsound
-@onready var cam = $Camera3D
+@onready var camera = $Camera3D
 
 
 const SPEED = 5.0
@@ -22,8 +22,8 @@ func _input(event):
 		return
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * MOUSE_SENS
-		rotation_degrees.x -= event.relative.y * MOUSE_SENS
-	rotation_degrees.x = clamp(rotation_degrees.x,-88,90)
+		camera.rotation_degrees.x -= event.relative.y * MOUSE_SENS
+	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x,-88,90)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("exit"):
