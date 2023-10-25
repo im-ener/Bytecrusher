@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx2t25pshog62"]
+[gd_scene load_steps=13 format=3 uid="uid://ksoc1403pbcp"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_omxu1"]
 [ext_resource type="Texture2D" uid="uid://b4ydxb1nnewbo" path="res://gun_sprites.png" id="2_e48jg"]
