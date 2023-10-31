@@ -22,7 +22,7 @@ background_color = Color(0.670588, 0.501961, 0.603922, 1)
 [node name="world" type="Node3D"]
 
 [node name="block" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.55826, 0, 0, 0, 4.72886, 0, 0, 0, -1.31894, 0, 0.420208, 0)
+transform = Transform3D(1.55826, 0, 0, 0, 4.72886, 0, 0, 0, -1.31894, 0, -0.965225, 0)
 material_override = SubResource("StandardMaterial3D_i5iok")
 mesh = SubResource("BoxMesh_qup7i")
 skeleton = NodePath("../environment")
@@ -33,7 +33,7 @@ skeleton = NodePath("../environment")
 shape = SubResource("ConcavePolygonShape3D_itp7i")
 
 [node name="block2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.375412, 0, 0, 0, 3.25472, 0, 0, 0, 9.72855, 3.39494, 0.770651, -1.42801)
+transform = Transform3D(0.375412, 0, 0, 0, 3.25472, 0, 0, 0, 9.72855, 3.39494, -0.778647, -1.42801)
 material_override = SubResource("StandardMaterial3D_i5iok")
 mesh = SubResource("BoxMesh_qup7i")
 skeleton = NodePath("../environment")
@@ -82,3 +82,14 @@ shadow_enabled = true
 
 [node name="player" parent="." instance=ExtResource("1_nk5ad")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+
+[node name="block4" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.72461, 0, 0, 0, 4.30996, 0, 0, 0, 1.2877, 3.65916, -2.4349, 3.86008)
+material_override = SubResource("StandardMaterial3D_i5iok")
+mesh = SubResource("BoxMesh_qup7i")
+skeleton = NodePath("../environment")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_itp7i")
