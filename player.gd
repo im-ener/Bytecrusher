@@ -36,6 +36,10 @@ func jump():
 	if is_on_floor() and Input.is_action_pressed("jump"):
 		velocity.y = jump_strength
 
+func fly():
+	if Input.is_action_just_pressed("fly"):
+		velocity.y = jump_strength * 5
+
 func _process(_delta):
 	
 	if Input.is_action_just_pressed("exit"):
