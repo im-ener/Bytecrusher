@@ -1,7 +1,7 @@
 [gd_scene load_steps=48 format=3 uid="uid://b88ifynqh2p7g"]
 
 [ext_resource type="PackedScene" uid="uid://ksoc1403pbcp" path="res://player.tscn" id="1_nk5ad"]
-[ext_resource type="Texture2D" uid="uid://d3k5wnlmm6vs7" path="res://textures/bytecrusher_garage door.png" id="2_4c78b"]
+[ext_resource type="Texture2D" uid="uid://b731ywifei0vf" path="res://textures/bytecrusher_garage door.png" id="2_4c78b"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_t5wak"]
 
@@ -242,7 +242,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_f16ov")
 environment = SubResource("Environment_x8w5f")
 
 [node name="player" parent="." instance=ExtResource("1_nk5ad")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.037, -0.788648, 2.92366)
 
 [node name="block4" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.72461, 0, 0, 0, 4.30996, 0, 0, 0, 1.2877, 14.5441, -2.4349, 3.86008)
