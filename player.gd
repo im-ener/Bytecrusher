@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var camera = $Camera3D
 @export var fall_acceleration = 75
 
-const SPEED = 8.0
+const SPEED = 16.0
 const JUMP_VELOCITY = 4.5
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
