@@ -1,11 +1,9 @@
 [gd_scene load_steps=46 format=3 uid="uid://b88ifynqh2p7g"]
 
 [ext_resource type="PackedScene" uid="uid://ksoc1403pbcp" path="res://player.tscn" id="1_nk5ad"]
-
-[sub_resource type="Gradient" id="Gradient_1grto"]
+[ext_resource type="Texture2D" uid="uid://b731ywifei0vf" path="res://textures/bytecrusher_garage door.png" id="2_4c78b"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_t5wak"]
-gradient = SubResource("Gradient_1grto")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ed1ly"]
 albedo_color = Color(0.482353, 0.00392157, 0.741176, 1)
@@ -45,9 +43,12 @@ albedo_texture = SubResource("GradientTexture2D_t5wak")
 albedo_color = Color(0.482353, 0.00392157, 0.741176, 1)
 albedo_texture = SubResource("GradientTexture2D_t5wak")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhq00"]
-albedo_color = Color(0.482353, 0.00392157, 0.741176, 1)
-albedo_texture = SubResource("GradientTexture2D_t5wak")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhrex"]
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("2_4c78b")
+metallic_specular = 0.0
+heightmap_scale = 16.0
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fq8p"]
 albedo_color = Color(0.482353, 0.00392157, 0.741176, 1)
@@ -232,12 +233,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_f16ov")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x8w5f")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.791123, 0.37971, 0.479525, -0.19916, -0.581342, 0.788909, 0.578324, -0.719626, -0.38429, 0.138067, 4.08924, -0.24925)
-shadow_enabled = true
-
 [node name="player" parent="." instance=ExtResource("1_nk5ad")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.037, -0.788648, 2.92366)
 
 [node name="block4" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.72461, 0, 0, 0, 4.30996, 0, 0, 0, 1.2877, 14.5441, -2.4349, 3.86008)
@@ -264,8 +261,8 @@ metadata/_edit_group_ = true
 shape = SubResource("ConcavePolygonShape3D_itp7i")
 
 [node name="block8" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.9801, 0, 0, 0, 5.96958, 0, 0, 0, 1.65817, 0.120198, -0.413101, 8.59775)
-material_override = SubResource("StandardMaterial3D_mhq00")
+transform = Transform3D(3.9801, 0, 0, 0, 4.00339, 0, 0, 0, 1.65817, 0.124409, 0.711366, 8.59116)
+material_override = SubResource("StandardMaterial3D_nhrex")
 mesh = SubResource("BoxMesh_qup7i")
 skeleton = NodePath("../environment")
 metadata/_edit_group_ = true
