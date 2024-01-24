@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://ci77iw584njvt"]
+[gd_scene load_steps=11 format=3 uid="uid://ci77iw584njvt"]
 
 [ext_resource type="PackedScene" uid="uid://ksoc1403pbcp" path="res://player.tscn" id="1_0bn5v"]
-[ext_resource type="PackedScene" uid="uid://dkxprpnh1kf0l" path="res://addons/level1roguebotwars.glb" id="2_i5k2n"]
+[ext_resource type="PackedScene" uid="uid://b5thiugidf8si" path="res://enemy.tscn" id="1_j18s2"]
+[ext_resource type="PackedScene" uid="uid://d3wrjv7tp52v5" path="res://game.glb" id="2_e4j0h"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o8xln"]
 
@@ -26,6 +27,11 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [node name="world" type="Node3D"]
 
+[node name="enemy2" parent="." instance=ExtResource("1_j18s2")]
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
+transform = Transform3D(0.965926, 0.224144, -0.12941, 0, 0.5, 0.866025, 0.258819, -0.836516, 0.482963, 0, 12.2114, 0)
+
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(15.0485, 0, 0, 0, 0.696548, 0, 0, 0, 14.4551, 1.66478, 2.85587, 14.5754)
 
@@ -47,11 +53,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.037, -0.788648, 2.92366)
 transform = Transform3D(0.965926, 0.224144, -0.12941, 0, 0.5, 0.866025, 0.258819, -0.836516, 0.482963, 0, 12.2114, 0)
 shadow_enabled = true
 
-[node name="level1roguebotwars" parent="." instance=ExtResource("2_i5k2n")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -21, 7.27738, -3)
-
 [node name="block3" type="MeshInstance3D" parent="."]
-transform = Transform3D(266.063, 0, 0, 0, 4.30996, 0, 0, 0, 370.98, -12.1375, -3.39841, 19.3471)
+transform = Transform3D(266.063, 0, 0, 0, 4.30996, 0, 0, 0, 370.98, -12.1375, -4.39841, 19.3471)
 material_override = SubResource("StandardMaterial3D_0mol8")
 mesh = SubResource("BoxMesh_qup7i")
 skeleton = NodePath("../environment")
@@ -60,3 +63,13 @@ skeleton = NodePath("../environment")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_itp7i")
+
+[node name="game" parent="." instance=ExtResource("2_e4j0h")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -63, -3, 72)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="game"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="game/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_itp7i")
+
+[node name="enemy" parent="." instance=ExtResource("1_j18s2")]
