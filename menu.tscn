@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://2x5aq0lemd85"]
+[gd_scene load_steps=5 format=3 uid="uid://2x5aq0lemd85"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_24f2w"]
+[ext_resource type="Texture2D" uid="uid://d2ta4k24vpfs0" path="res://logo.png" id="2_njty0"]
+[ext_resource type="AudioStream" uid="uid://vxjebvjqvwxv" path="res://audio/no more skin lol.wav" id="3_kwkad"]
+[ext_resource type="AudioStream" uid="uid://nu72la7faply" path="res://audio/begin game.wav" id="4_06r5m"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_24f2w")
@@ -32,6 +39,20 @@ text = "options"
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "exit"
+
+[node name="Logo" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(558, 167)
+scale = Vector2(10, 10)
+texture = ExtResource("2_njty0")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kwkad")
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_06r5m")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
