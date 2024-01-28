@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5thiugidf8si"]
-
-[ext_resource type="Texture2D" uid="uid://c2dakrfsty2b6" path="res://bytecrusher_e_guardian.png" id="1_ramlk"]
+[gd_scene load_steps=3 format=3 uid="uid://b5thiugidf8si"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyl02"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ramlk")
+"texture": null
 }],
 "loop": true,
 "name": &"idle",

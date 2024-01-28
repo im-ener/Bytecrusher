@@ -1,7 +1,6 @@
-[gd_scene load_steps=46 format=3 uid="uid://b88ifynqh2p7g"]
+[gd_scene load_steps=45 format=3 uid="uid://b88ifynqh2p7g"]
 
 [ext_resource type="PackedScene" uid="uid://ksoc1403pbcp" path="res://player.tscn" id="1_nk5ad"]
-[ext_resource type="Texture2D" path="res://textures/bytecrusher_garage door.png" id="2_4c78b"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_t5wak"]
 
@@ -46,7 +45,6 @@ albedo_texture = SubResource("GradientTexture2D_t5wak")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhrex"]
 albedo_color = Color(1, 1, 1, 0)
-albedo_texture = ExtResource("2_4c78b")
 metallic_specular = 0.0
 heightmap_scale = 16.0
 texture_filter = 0
