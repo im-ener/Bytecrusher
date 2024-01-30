@@ -1,18 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://c0wen4gf2vo0v"]
 
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://dei5l1xvxrpsq" path="res://textures/robit.png" id="2_80o73"]
 [ext_resource type="Texture2D" uid="uid://cuofstmrobgbg" path="res://textures/robit3.png" id="3_7lwhi"]
-=======
-[ext_resource type="Script" path="res://enemies.gd" id="1_i7ohw"]
-[ext_resource type="Texture2D" uid="uid://i8ujy3yn7mve" path="res://robit3.png" id="2_1kru1"]
->>>>>>> 6308aee3c99b40f52b05ae8d9e1878a729f1a144
 [ext_resource type="Texture2D" uid="uid://k11hw7iynfp3" path="res://bytecrusher_e_windupded.png" id="3_gggf2"]
 [ext_resource type="Texture2D" uid="uid://cpr0sv6wlxgs0" path="res://bytecrusher_e_windupded2.png" id="4_tqkm0"]
 [ext_resource type="Texture2D" uid="uid://b4yl48ci86uf8" path="res://bytecrusher_e_windupded3.png" id="5_ihboh"]
 [ext_resource type="Texture2D" uid="uid://c3jok7jjqkoy" path="res://bytecrusher_e_windupded4.png" id="6_ywr5q"]
 [ext_resource type="Texture2D" uid="uid://2er6a60idp2n" path="res://bytecrusher_e_windupded5.png" id="7_uxei6"]
 [ext_resource type="Texture2D" uid="uid://s3cr8eavc0re" path="res://robit2.png" id="8_ydx8g"]
+[ext_resource type="Script" path="res://enemies.gd" id="9_47aj2"]
 [ext_resource type="Texture2D" uid="uid://dgendtoys6nfn" path="res://robit4.png" id="9_a2idf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h0jxa"]
@@ -74,12 +70,12 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_buh75"]
 
 [node name="Based" type="CharacterBody3D"]
-script = ExtResource("1_i7ohw")
+script = ExtResource("9_47aj2")
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.003, -1, 0.003)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.003, 0, 0.003)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_h0jxa")
@@ -87,7 +83,7 @@ animation = &"dumba$(idle)"
 frame_progress = 0.819043
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_buh75")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
