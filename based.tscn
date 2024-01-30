@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0wen4gf2vo0v"]
+[gd_scene load_steps=12 format=3 uid="uid://c0wen4gf2vo0v"]
 
 [ext_resource type="Texture2D" uid="uid://i8ujy3yn7mve" path="res://robit3.png" id="2_1kru1"]
 [ext_resource type="Texture2D" uid="uid://k11hw7iynfp3" path="res://bytecrusher_e_windupded.png" id="3_gggf2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c3jok7jjqkoy" path="res://bytecrusher_e_windupded4.png" id="6_ywr5q"]
 [ext_resource type="Texture2D" uid="uid://2er6a60idp2n" path="res://bytecrusher_e_windupded5.png" id="7_uxei6"]
 [ext_resource type="Texture2D" uid="uid://s3cr8eavc0re" path="res://robit2.png" id="8_ydx8g"]
+[ext_resource type="Script" path="res://enemies.gd" id="9_47aj2"]
 [ext_resource type="Texture2D" uid="uid://dgendtoys6nfn" path="res://robit4.png" id="9_a2idf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h0jxa"]
@@ -68,18 +69,19 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_buh75"]
 
 [node name="Based" type="CharacterBody3D"]
+script = ExtResource("9_47aj2")
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.003, -0.5, 0.003)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.003, 0, 0.003)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_h0jxa")
 animation = &"meatgames(walking)"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_buh75")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
