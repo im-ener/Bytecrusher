@@ -48,6 +48,7 @@ texture = ExtResource("2_njty0")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kwkad")
+volume_db = -3.748
 autoplay = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
