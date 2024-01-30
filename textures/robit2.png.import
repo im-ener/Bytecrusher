@@ -2,28 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv1u0td5ep5ca"
-path.s3tc="res://.godot/imported/game_bytecrusher_garage_door.png-c4045580f3f44a494d65b8d4f8a7098e.s3tc.ctex"
+uid="uid://127qar6cmbl2"
+path="res://.godot/imported/robit2.png-70c755df5cf97ec25e258a4b666c3d0b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://game_bytecrusher_garage_door.png"
-dest_files=["res://.godot/imported/game_bytecrusher_garage_door.png-c4045580f3f44a494d65b8d4f8a7098e.s3tc.ctex"]
+source_file="res://textures/robit2.png"
+dest_files=["res://.godot/imported/robit2.png-70c755df5cf97ec25e258a4b666c3d0b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -33,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

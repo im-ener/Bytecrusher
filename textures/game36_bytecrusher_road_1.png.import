@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dafj1hj0c2my0"
-path.s3tc="res://.godot/imported/game36_bytecrusher_road.png-92934c89b35b3638a55a575041916649.s3tc.ctex"
+uid="uid://cnopc1flbmyso"
+path.s3tc="res://.godot/imported/game36_bytecrusher_road_1.png-5f721387f387dc0b35d1bbaa25d37506.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://game36_bytecrusher_road.png"
-dest_files=["res://.godot/imported/game36_bytecrusher_road.png-92934c89b35b3638a55a575041916649.s3tc.ctex"]
+source_file="res://textures/game36_bytecrusher_road_1.png"
+dest_files=["res://.godot/imported/game36_bytecrusher_road_1.png-5f721387f387dc0b35d1bbaa25d37506.s3tc.ctex"]
 
 [params]
 

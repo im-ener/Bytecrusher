@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://127qar6cmbl2"
-path="res://.godot/imported/robit2.png-7f00e984a094b6a367d4b5f87b75fc69.ctex"
+uid="uid://dx2qdaie3fook"
+path="res://.godot/imported/guard.png-fac4ebb878b4e396258fece8610c8493.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://robit2.png"
-dest_files=["res://.godot/imported/robit2.png-7f00e984a094b6a367d4b5f87b75fc69.ctex"]
+source_file="res://textures/guard.png"
+dest_files=["res://.godot/imported/guard.png-fac4ebb878b4e396258fece8610c8493.ctex"]
 
 [params]
 

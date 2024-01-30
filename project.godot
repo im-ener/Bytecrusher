@@ -15,6 +15,10 @@ run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://bytecrusher beta1 icon.ico"
 
+[autoload]
+
+PlayerStats="*res://Scripts/PlayerStats.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray()

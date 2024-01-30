@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cme6yl7lkiv5o"
-path="res://.godot/imported/gaurd.png-8abc286d358c23f85b399577dcc7ba92.ctex"
+uid="uid://b4ydxb1nnewbo"
+path="res://.godot/imported/gun_sprites.png-78a9493b57e492d382ebe2d183c6b637.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gaurd.png"
-dest_files=["res://.godot/imported/gaurd.png-8abc286d358c23f85b399577dcc7ba92.ctex"]
+source_file="res://textures/gun_sprites.png"
+dest_files=["res://.godot/imported/gun_sprites.png-78a9493b57e492d382ebe2d183c6b637.ctex"]
 
 [params]
 
