@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw5ivbfdarl3v"]
+[gd_scene load_steps=5 format=3 uid="uid://dw5ivbfdarl3v"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_omxu1"]
 [ext_resource type="AudioStream" uid="uid://bxmdi8yeq2ltc" path="res://audio/pistol shot.mp3" id="3_0qga6"]
 [ext_resource type="PackedScene" uid="uid://c3klpxxwxfdg7" path="res://pistol.tscn" id="3_l4jg8"]
-[ext_resource type="PackedScene" uid="uid://eoxh2baclf6r" path="res://HUD.tscn" id="4_fl6gt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_umtuu"]
 
@@ -23,8 +22,6 @@ collision_mask = 3
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="Hud" parent="Camera3D" instance=ExtResource("4_fl6gt")]
 
 [node name="shootsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0qga6")

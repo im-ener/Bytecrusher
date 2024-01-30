@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i8ujy3yn7mve"
-path.s3tc="res://.godot/imported/robit3.png-babd2cec726fd4b73abfe8a21ff6e36a.s3tc.ctex"
+uid="uid://kmgvymxnf8ot"
+path.s3tc="res://.godot/imported/game_bytecrusher_garage_door.png-c4045580f3f44a494d65b8d4f8a7098e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://robit3.png"
-dest_files=["res://.godot/imported/robit3.png-babd2cec726fd4b73abfe8a21ff6e36a.s3tc.ctex"]
+source_file="res://game_bytecrusher_garage_door.png"
+dest_files=["res://.godot/imported/game_bytecrusher_garage_door.png-c4045580f3f44a494d65b8d4f8a7098e.s3tc.ctex"]
 
 [params]
 
