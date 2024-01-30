@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cme6yl7lkiv5o"
-path.s3tc="res://.godot/imported/gaurd.png-8abc286d358c23f85b399577dcc7ba92.s3tc.ctex"
+uid="uid://b4yl48ci86uf8"
+path.s3tc="res://.godot/imported/bytecrusher_e_windupded3.png-1335d8fb72385ab534bd8d68730df7f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gaurd.png"
-dest_files=["res://.godot/imported/gaurd.png-8abc286d358c23f85b399577dcc7ba92.s3tc.ctex"]
+source_file="res://bytecrusher_e_windupded3.png"
+dest_files=["res://.godot/imported/bytecrusher_e_windupded3.png-1335d8fb72385ab534bd8d68730df7f1.s3tc.ctex"]
 
 [params]
 

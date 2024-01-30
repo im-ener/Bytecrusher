@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0wen4gf2vo0v"]
+
+[ext_resource type="Texture2D" uid="uid://cmprp655o2hg3" path="res://robit.png" id="1_dhi7r"]
+[ext_resource type="Texture2D" uid="uid://cfx3v6km2di7m" path="res://robit3.png" id="2_1kru1"]
+[ext_resource type="Texture2D" uid="uid://k11hw7iynfp3" path="res://bytecrusher_e_windupded.png" id="3_gggf2"]
+[ext_resource type="Texture2D" uid="uid://cpr0sv6wlxgs0" path="res://bytecrusher_e_windupded2.png" id="4_tqkm0"]
+[ext_resource type="Texture2D" uid="uid://b4yl48ci86uf8" path="res://bytecrusher_e_windupded3.png" id="5_ihboh"]
+[ext_resource type="Texture2D" uid="uid://c3jok7jjqkoy" path="res://bytecrusher_e_windupded4.png" id="6_ywr5q"]
+[ext_resource type="Texture2D" uid="uid://2er6a60idp2n" path="res://bytecrusher_e_windupded5.png" id="7_uxei6"]
+[ext_resource type="Texture2D" uid="uid://127qar6cmbl2" path="res://robit2.png" id="8_ydx8g"]
+[ext_resource type="Texture2D" uid="uid://b5ho82hetkg2" path="res://robit4.png" id="9_a2idf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0jxa"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_dhi7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_1kru1")
+}],
+"loop": true,
+"name": &"dumba$(idle)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1kru1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_dhi7r")
+}],
+"loop": true,
+"name": &"meatgames(walking)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gggf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tqkm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihboh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ywr5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uxei6")
+}],
+"loop": true,
+"name": &"robotdead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("8_ydx8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a2idf")
+}],
+"loop": true,
+"name": &"shock",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_buh75"]
+
+[node name="Based" type="CharacterBody3D"]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.5, 0, 0, 0, 1, 0.00327468, -0.00902748, 0.00261426)
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_h0jxa")
+animation = &"meatgames(walking)"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_buh75")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
