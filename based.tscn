@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0wen4gf2vo0v"]
+[gd_scene load_steps=13 format=3 uid="uid://c0wen4gf2vo0v"]
 
-[ext_resource type="Texture2D" uid="uid://i8ujy3yn7mve" path="res://robit3.png" id="2_1kru1"]
+[ext_resource type="Texture2D" uid="uid://dei5l1xvxrpsq" path="res://textures/robit.png" id="2_80o73"]
+[ext_resource type="Texture2D" uid="uid://cuofstmrobgbg" path="res://textures/robit3.png" id="3_7lwhi"]
 [ext_resource type="Texture2D" uid="uid://k11hw7iynfp3" path="res://bytecrusher_e_windupded.png" id="3_gggf2"]
 [ext_resource type="Texture2D" uid="uid://cpr0sv6wlxgs0" path="res://bytecrusher_e_windupded2.png" id="4_tqkm0"]
 [ext_resource type="Texture2D" uid="uid://b4yl48ci86uf8" path="res://bytecrusher_e_windupded3.png" id="5_ihboh"]
@@ -13,11 +14,11 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_h0jxa"]
 animations = [{
 "frames": [{
-"duration": 2.0,
-"texture": null
+"duration": 1.0,
+"texture": ExtResource("2_80o73")
 }, {
-"duration": 2.0,
-"texture": ExtResource("2_1kru1")
+"duration": 1.0,
+"texture": ExtResource("3_7lwhi")
 }],
 "loop": true,
 "name": &"dumba$(idle)",
@@ -25,10 +26,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_1kru1")
+"texture": ExtResource("2_80o73")
 }, {
 "duration": 1.0,
-"texture": null
+"texture": ExtResource("3_7lwhi")
 }],
 "loop": true,
 "name": &"meatgames(walking)",
@@ -78,7 +79,8 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.003, 0, 0.003)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_h0jxa")
-animation = &"meatgames(walking)"
+animation = &"dumba$(idle)"
+frame_progress = 0.819043
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

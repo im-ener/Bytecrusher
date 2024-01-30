@@ -1,6 +1,6 @@
 [gd_scene load_steps=45 format=3 uid="uid://b88ifynqh2p7g"]
 
-[ext_resource type="PackedScene" uid="uid://ksoc1403pbcp" path="res://player.tscn" id="1_nk5ad"]
+[ext_resource type="PackedScene" uid="uid://dw5ivbfdarl3v" path="res://player.tscn" id="1_nk5ad"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_t5wak"]
 

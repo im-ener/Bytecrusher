@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3klpxxwxfdg7"]
+[gd_scene load_steps=11 format=3 uid="uid://c3klpxxwxfdg7"]
 
-[ext_resource type="Texture2D" path="res://textures/gun_sprites.png" id="1_btjm1"]
+[ext_resource type="Texture2D" uid="uid://b4ydxb1nnewbo" path="res://textures/gun_sprites.png" id="1_btjm1"]
+[ext_resource type="Texture2D" uid="uid://duh1ssryy385" path="res://huddemo.png" id="2_boqvv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otbcq"]
 atlas = ExtResource("1_btjm1")
@@ -81,10 +82,11 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="GunSprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
-position = Vector2(40, 41)
+z_index = -1
+position = Vector2(40, -84)
 rotation = 3.14159
 sprite_frames = SubResource("SpriteFrames_gc65k")
-animation = &"shoot"
+animation = &"idle"
 autoplay = "idle"
 centered = false
 flip_h = true
@@ -94,3 +96,13 @@ flip_v = true
 
 [node name="RayCast3D" type="RayCast3D" parent="GunRays"]
 target_position = Vector3(0, 0, -20)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="fakehud" type="Sprite2D" parent="CanvasLayer2"]
+z_index = 11
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(575.75, 586.25)
+scale = Vector2(3.63281, 1.97656)
+texture = ExtResource("2_boqvv")

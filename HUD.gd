@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node
 
 @onready var armor = $MarginContainer/Stats/Values/ArmorValue
 @onready var health = $MarginContainer/Stats/Values/HealthValue

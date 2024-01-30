@@ -3,14 +3,18 @@
 [ext_resource type="Script" path="res://HUD.gd" id="1_oeyrc"]
 
 [node name="Hud" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_oeyrc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
 offset_left = 13.0
 offset_top = 11.0
 offset_right = 1138.0
 offset_bottom = 627.0
 
 [node name="Stats" type="HBoxContainer" parent="MarginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Labels" type="VBoxContainer" parent="MarginContainer/Stats"]
@@ -45,7 +49,6 @@ text = "100"
 layout_mode = 2
 size_flags_horizontal = 10
 alignment = 2
-script = ExtResource("1_oeyrc")
 
 [node name="AmmoValue" type="Label" parent="MarginContainer/Stats/Ammo"]
 layout_mode = 2
