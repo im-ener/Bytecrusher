@@ -72,14 +72,14 @@ animations = [{
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.003, -1, 0.003)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.003, -0.5, 0.003)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_h0jxa")
 animation = &"meatgames(walking)"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("BoxShape3D_buh75")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
