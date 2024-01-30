@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw1cmrbp1u6km"
-path="res://.godot/imported/gaurd2.png-1e3ebe29967c499807263923851eb1cb.ctex"
+uid="uid://cuofstmrobgbg"
+path="res://.godot/imported/robit3.png-b9f8e6a328c0002631fcc45ddc66753a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gaurd2.png"
-dest_files=["res://.godot/imported/gaurd2.png-1e3ebe29967c499807263923851eb1cb.ctex"]
+source_file="res://textures/robit3.png"
+dest_files=["res://.godot/imported/robit3.png-b9f8e6a328c0002631fcc45ddc66753a.ctex"]
 
 [params]
 

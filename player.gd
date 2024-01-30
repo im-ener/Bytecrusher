@@ -5,10 +5,11 @@ extends CharacterBody3D
 @onready var shoot_sound = $shootsound
 @onready var camera = $Camera3D
 @export var fall_acceleration = 75
-
+@onready var carried_guns =[pistol]
 const SPEED = 12.0
 const JUMP_VELOCITY = 4.5
-
+#gun  variables
+@onready var pistol = preload("res://pistol.tscn")
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 const MOUSE_SENS = 0.5
@@ -19,8 +20,6 @@ var jump_strength = 25
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
-	$CanvasLayer/deathscreen/Panel/Button.button_up.connect(restart)
 
 func _input(event):
 	if dead:
@@ -31,14 +30,16 @@ func _input(event):
 	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x,-88,90)
 
 
-
 func jump():
 	if is_on_floor() and Input.is_action_pressed("jump"):
 		velocity.y = jump_strength
 
-func fly():
-	if Input.is_action_just_pressed("fly"):
-		velocity.y = jump_strength * 5
+
+func change_gun(gun):
+	$Pivot/Gun.get_child(0).queue_free()
+	var new_gun = carried_guns[gun].instance()
+	$Pivot/Gun.add_child(new_gun)
+	PlayerStats.current_gun = new_gun.name
 
 func _process(_delta):
 	
@@ -51,8 +52,6 @@ func _process(_delta):
 	
 	if dead:
 		return
-	if Input.is_action_just_pressed("shoot"):
-		shoot()
 
 func _physics_process(_delta):
 	if not is_on_floor():
@@ -74,19 +73,6 @@ func _physics_process(_delta):
 
 func restart():
 	get_tree().reload_current_scene()
-
-func shoot():
-	if !can_shoot:
-		return
-	can_shoot = false
-	animated_sprite_2d.play("shoot")
-	shoot_sound.play()
-	if ray_cast_3d.is_colliding() and ray_cast_3d.get_collider().has_method("kill"):
-		ray_cast_3d.get_collider().kill()
-
-func shoot_anim_done():
-	can_shoot = true
-	animated_sprite_2d.play("idle")
 
 func kill():
 	dead = true

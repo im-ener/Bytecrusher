@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2pwl1cw5aw3v"]
+
+[ext_resource type="Texture2D" uid="uid://b4ydxb1nnewbo" path="res://textures/gun_sprites.png" id="1_btjm1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otbcq"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(2355, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jecy5"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(1884, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgenl"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(1413, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7govo"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(942, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbey0"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(0, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln5nb"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(471, 0, 471, 381)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l545w"]
+atlas = ExtResource("1_btjm1")
+region = Rect2(942, 0, 471, 381)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc65k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otbcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jecy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgenl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7govo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbey0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln5nb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l545w")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 12.0
+}]
+
+[node name="Pistol" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="GunSprite" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+position = Vector2(40, 41)
+rotation = 3.14159
+sprite_frames = SubResource("SpriteFrames_gc65k")
+animation = &"shoot"
+autoplay = "idle"
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="GunRays" type="Node" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="GunRays"]
+target_position = Vector3(0, 0, -20)
