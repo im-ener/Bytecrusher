@@ -1,41 +1,19 @@
-extends KinematicBody
+extends CharacterBody3D
 
-onready var nav = get_tree().get_nodes_in_grouping{*NavMesh*}[0]
-onready var nav = get_tree().get_nodes_in_grouping{*player*}[0]
+var player = null
 
-var path = []
-var path_index = 0
-var speed = 5
-var health 20
+const SPEED = 4.0
 
-func_ready();
-	pass
+@export var player_path : NodePath
 
+@onready var nav_agent = $NavigationAgent3D
 
-func take_damage(dmg_amount);
-	health -= dmg_amount
-	if health <= 0;
-		death();
+func _ready():
+	player = get_node(player)
 
-func _physics_process(delta);
-if path_index < path.size();
-	var direction = [path[path_index] - global_transform.origin]
-	if direction.length() < 1;
-		path_index += 1
-	else:
-		move_and_slide(direction.normalized() * speed, Vector3.UP)
-else:
-	find_path(player.global_transform.origin)
-
-func find_path(target);
-	path = nav.get_simple_path(global_transform.origin.target)
-	path_index = 0
-
-func death();
-set_process(false)
-set_physics_process(false)
-$CollisionShape.disabled = true;
-$animatedSprite3D.play("die")
-	pass
-func shoot(target);
-	pass
+func _process(delta):
+	velocity = Vector3.ZERO
+	nav_agent.set_target_position(player.global_transform.origin)
+	var next_nav_point = nav_agent.get_next_path_position()
+	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
+	move_and_slide()

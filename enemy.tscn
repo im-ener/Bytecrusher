@@ -25,3 +25,5 @@ animation = &"idle"
 shape = SubResource("BoxShape3D_qs5gj")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
