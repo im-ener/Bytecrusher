@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://2x5aq0lemd85"]
+[gd_scene load_steps=5 format=3 uid="uid://cpbg7pgftlb2p"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_24f2w"]
-[ext_resource type="Texture2D" uid="uid://d2ta4k24vpfs0" path="res://textures/logo.png" id="2_njty0"]
+[ext_resource type="Texture2D" path="res://textures/logo.png" id="2_njty0"]
 [ext_resource type="AudioStream" uid="uid://vxjebvjqvwxv" path="res://audio/no more skin lol.wav" id="3_kwkad"]
 [ext_resource type="AudioStream" uid="uid://nu72la7faply" path="res://audio/begin game.wav" id="4_06r5m"]
 
@@ -31,6 +31,7 @@ layout_mode = 2
 text = "play"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "options"
 
